@@ -10,8 +10,8 @@ function encrypt(plaintext::String)::Dict{Int64,String}
     #always start character counter at 0
     charCount = 0
 
-    encryption_model = _build(DNAEncryptionKey)
-    encryptionkey = encryption_model.encryptionkey
+    encryptionModel = build(DNAEncryptionKey)
+    encryptionkey = encryptionModel.encryptionkey
 
     for c in uppercase(plaintext)     
         #for each character in the plaintext, add another component to the dictionary that corresponds to the encrytion of that character 
@@ -32,5 +32,21 @@ Fill me in
 """
 function decrypt(encrypteddata::Dict{Int64,String})::String
 
+    #initialize the output string
+    decryptedMessage = ""
+
+    strCount = 0
+
+    encryptionModel = build(DNAEncryptionKey)
+    # invertedEncryptionKey = map(reverse, encryptionModel.encryptionkey)
+    invertedEncryptionKey = Dict(str => c for (c, str) in encryptionModel.encryptionkey)
     
+
+    for (x, str) in encrypteddata
+
+        decryptedMessage[strCount] = invertedEncryptionKey[str]
+        strCount += 1
+    end
+
+    return decryptedMessage
 end

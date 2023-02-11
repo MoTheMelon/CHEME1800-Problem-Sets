@@ -1,0 +1,4 @@
+name = "DNACryptographyPackage"
+uuid = "f008cafe-6b8c-4cc4-8e74-7ed305dd69f2"
+authors = ["MoTheMelon <ortiz97mi@gmail.com>"]
+version = "0.1.0"
