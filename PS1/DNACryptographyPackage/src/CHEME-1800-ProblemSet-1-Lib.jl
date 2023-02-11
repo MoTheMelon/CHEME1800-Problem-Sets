@@ -1,8 +1,8 @@
 """
     encrypt(plaintext::String) -> Dict{Int64,String}
 
-*** write here how the function works as a whole
-"""
+    complete meeeeeeee
+    """
 function encrypt(plaintext::String)::Dict{Int64,String}
 
     #initialize the output message as correct output type, Dict{Int64, String}
@@ -27,26 +27,30 @@ end
 
 """
     decrypt(encrypteddata::Dict{Int64,String}) -> String
-
-Fill me in
-"""
+complete me toooooooo
+"""   
 function decrypt(encrypteddata::Dict{Int64,String})::String
 
-    #initialize the output string
-    decryptedMessage = ""
+    #get length of encrypted data
+    numChars = length(encrypteddata)
+    #initialize final plaintext (decryptedMessage) as being a vector of characters
+    decryptedMessage = Vector{Char}()
 
-    strCount = 0
-
+    #create normal encryption key
     encryptionModel = build(DNAEncryptionKey)
-    # invertedEncryptionKey = map(reverse, encryptionModel.encryptionkey)
-    invertedEncryptionKey = Dict(str => c for (c, str) in encryptionModel.encryptionkey)
-    
+    encryptionKey = encryptionModel.encryptionkey
 
-    for (x, str) in encrypteddata
+    #invert the encryption key with a for loop to reassign all values to the reverse
+    invertedEncryptionKey = Dict(str => c for (c, str) in encryptionKey)
 
-        decryptedMessage[strCount] = invertedEncryptionKey[str]
-        strCount += 1
+    for c in 0:(numChars-1)
+
+        #grab a character starting at an index of 0
+        index = encrypteddata[c]
+        value = invertedEncryptionKey[index]
+        push!(decryptedMessage, value)
+
     end
 
-    return decryptedMessage
+    return String(decryptedMessage)
 end
