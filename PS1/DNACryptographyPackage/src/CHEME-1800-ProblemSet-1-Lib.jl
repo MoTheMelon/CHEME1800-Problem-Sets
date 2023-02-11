@@ -1,7 +1,10 @@
 """
     encrypt(plaintext::String) -> Dict{Int64,String}
 
-    complete meeeeeeee
+Method which encrypts a String `plaintext` using a `DNAEncryptionKey` to store it in a Dict `message` and return `message`
+
+input: String `plaintext`
+output: Dict{Int64,String} `message`
     """
 function encrypt(plaintext::String)::Dict{Int64,String}
 
@@ -27,7 +30,11 @@ end
 
 """
     decrypt(encrypteddata::Dict{Int64,String}) -> String
-complete me toooooooo
+
+Method which decrypts an encoded message `encrypteddata` using an inverted encryption key to return a String `message`
+
+input: Dict{Int64,String} `encrypteddata`
+output: String `message`
 """   
 function decrypt(encrypteddata::Dict{Int64,String})::String
 
@@ -52,5 +59,7 @@ function decrypt(encrypteddata::Dict{Int64,String})::String
 
     end
 
-    return String(decryptedMessage)
+    message = String(decryptedMessage)
+    
+    return message
 end
