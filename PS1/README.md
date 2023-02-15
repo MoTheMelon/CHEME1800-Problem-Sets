@@ -1,16 +1,16 @@
 ## Problem Set 1: Introduction to DNA Cryptography 
 
 ### Team Members and Contributions
-- Rafael Tassari (rt453)
-    - Completed doc strings
-    - Testing scripts
 - Madeline Ortiz (mio6)
     - Initialized project
     - Debugging
     - Testing Scripts
+- Rafael Tassari (rt453)
+    - Completed doc strings
+    - Testing scripts
 
 ### Project Description
-Describe the problem set here!
+Create encryption and decryption functions
 
 ### Running the Project
 1. Set working directory to `CHEME1800-Problem-Sets\PS1\DNACryptographyPackage\`
