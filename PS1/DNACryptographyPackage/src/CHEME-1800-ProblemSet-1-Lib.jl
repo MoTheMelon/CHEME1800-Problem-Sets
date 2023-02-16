@@ -5,6 +5,8 @@ Method which encrypts a String `plaintext` using a `DNAEncryptionKey` to store i
 
 input: String `plaintext`
 output: Dict{Int64,String} `message`
+
+Output dictionary has type {Int64, String} in order to keep track of the order of the characters in the message and map them to their respective DNA Codes.
     """
 function encrypt(plaintext::String)::Dict{Int64,String}
 
@@ -55,10 +57,12 @@ function decrypt(encrypteddata::Dict{Int64,String})::String
         #grab a character starting at an index of 0
         index = encrypteddata[c]
         value = invertedEncryptionKey[index]
+        #append characters to the end of the message to build it
         push!(decryptedMessage, value)
 
     end
 
+    #turn the vector of characters back into type String
     message = String(decryptedMessage)
     
     return message
