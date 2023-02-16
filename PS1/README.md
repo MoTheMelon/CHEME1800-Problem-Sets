@@ -3,6 +3,7 @@
 ### Team Members and Contributions
 - Madeline Ortiz (mio6)
     - Initialized project
+    - Added comments to code
     - Debugging
     - Testing Scripts
 - Rafael Tassari (rt453)
