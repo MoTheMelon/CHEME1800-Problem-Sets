@@ -47,7 +47,7 @@ function _recursive_reaction_parser(q::Queue, tmp::Queue{Char}, a::Array{String,
 end
 
 """
-    recursive_parser(string::String; delim::Char=' ') -> Dict{Int64,String}
+    recursive_reaction_parser(string::String; delim::Char=' ') -> Dict{Int64,String}
 """
 function recursive_reaction_parser(string::String; 
     delim::Char=' ')::Dict{Int64,String}

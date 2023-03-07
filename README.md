@@ -4,4 +4,5 @@
 - Create encryption and decryption functions
 - Understand type matching and for loops
 
-### Problem Set 2: ?
+### Problem Set 2: Recursive Chemical Formula Parser
+- Develop a program to compute the molecular composition of chemical compound strings
