@@ -23,9 +23,10 @@ function read_compounds_file(path::String)::Dict{String, MyChemicalCompoundModel
                 # grab the fields -
                 name = string(fields[1]);
                 compound = string(fields[2]);
+                composition = Dict{Char, Int64}()
 
                 # build - 
-                model = build(MyChemicalCompoundModel, name, compound);
+                model = build(MyChemicalCompoundModel, name, compound, composition);
 
                 # store -
                 compounds[name] = model;
