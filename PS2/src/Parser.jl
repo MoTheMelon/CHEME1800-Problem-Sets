@@ -1,7 +1,8 @@
 """
-    _recursive_compound_parser()
+    _recursive_compound_parser(q::Queue{Char}, elements::Array{Char,1}, values::Array{Int,1})
 
-TODO: Describe what this function does, the args and what we expect it to return
+This function holds the logic behind the recursive parser. It updates the inputted elements and values arrays to update the parser.
+
 """
 function _recursive_compound_parser(q::Queue{Char}, elements::Array{Char,1}, values::Array{Int,1})
 
@@ -68,6 +69,8 @@ end
 """
     recursive_compound_parser(compounds::Dict{String, MyChemicalCompoundModel}) -> Dict{String, MyChemicalCompoundModel}
 
+Parser that reads the compound formula and stores the keys (elements) and values (values) in a dictionary. The inputted dictionary compounds is
+updated and then returned.
 """
 function recursive_compound_parser(compounds::Dict{String, MyChemicalCompoundModel})::Dict{String, MyChemicalCompoundModel}
     # process each compound
