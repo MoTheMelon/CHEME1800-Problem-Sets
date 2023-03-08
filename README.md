@@ -5,4 +5,4 @@
 - Understand type matching and for loops
 
 ### Problem Set 2: Recursive Chemical Formula Parser
-- Develop a program to compute the molecular composition of chemical compound strings
+- Develop a program to store and compute the molecular composition of chemical compound strings
