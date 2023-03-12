@@ -44,9 +44,9 @@ function _recursive_compound_parser(q::Queue{Char}, elements::Array{Char,1}, val
 
             end
         
-        #if the last character is a number, put that number in the values array
         elseif (isnumeric(next_char) && isempty(q) == true)
-            num = parse(Int,next_char)
+            #if the last character is a number, put that number in the values array
+            num = parse(Int, next_char)
             push!(values, num)
         
         elseif (isempty(q) == true)
