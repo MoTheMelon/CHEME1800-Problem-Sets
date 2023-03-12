@@ -6,3 +6,7 @@
 
 ### Problem Set 2: Recursive Chemical Formula Parser
 - Develop a program to store and compute the molecular composition of chemical compound strings
+
+### Problem Set 3: Iterative Solution of a Species Concentration Balance
+- Implement matrix and vector building functions
+- Solve decay system of equaitons using Jacobi and Gauss_Siedel iteration methods
