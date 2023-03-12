@@ -74,7 +74,7 @@ updated and then returned.
 """
 function recursive_compound_parser(compounds::Dict{String, MyChemicalCompoundModel})::Dict{String, MyChemicalCompoundModel}
     # process each compound
-    for (name, compound) ∈ compounds
+    for (name, compound) ∈ compounds 
         
         composition = Dict{Char,Int}()
         q = Queue{Char}()
