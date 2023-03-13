@@ -7,7 +7,7 @@
   - 
 
 ### Project Description
-    Implement matrix and vector building functions and solve a decay system of equaitons using Jacobi and Gauss_Siedel iteration methods
+- Implement matrix and vector building functions and solve a decay system of equaitons using Jacobi and Gauss_Siedel iteration methods
 
 ### Data Table
 
